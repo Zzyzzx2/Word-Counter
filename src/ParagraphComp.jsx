@@ -8,10 +8,10 @@ export function ParagraphComp()
         if (storedData) {
           return (JSON.parse(storedData));
         }
-        return "";
+        return "asdf";
       });
 
-   
+      console.log(para);
       console.log(typeof para);
       if (typeof para !== "string") {
         setPara(""); // Set it to an empty string if it's not a string
