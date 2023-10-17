@@ -10,17 +10,18 @@ export function ParagraphComp()
         }
       });
 
-    useEffect(() => {
-        // Save the 'para' state to local storage in JSON format
-        localStorage.setItem("textData", JSON.stringify(para));
-      }, [para]);
+   
       console.log(typeof para);
       if (typeof para !== "string") {
         setPara(""); // Set it to an empty string if it's not a string
       }
       
     let count = para.split(/\s+/).filter(Boolean).length; 
-    
+    useEffect(() => {
+        // Save the 'para' state to local storage in JSON format
+        localStorage.setItem("textData", JSON.stringify(para));
+      }, [para]);
+      
     function handleChange(e)
     {
         setPara(e.target.value)
