@@ -8,6 +8,7 @@ export function ParagraphComp()
         if (storedData) {
           return (JSON.parse(storedData));
         }
+        return "";
       });
 
    
@@ -21,7 +22,7 @@ export function ParagraphComp()
         // Save the 'para' state to local storage in JSON format
         localStorage.setItem("textData", JSON.stringify(para));
       }, [para]);
-      
+
     function handleChange(e)
     {
         setPara(e.target.value)
