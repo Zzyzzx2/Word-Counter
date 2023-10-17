@@ -16,7 +16,7 @@ export function ParagraphComp()
       }, [para]);
     
      
-    let count =para.split(/\s+/).filter(Boolean).length; 
+    let count = para===""? 0:para.split(/\s+/).filter(Boolean).length; 
     
     function handleChange(e)
     {
