@@ -14,9 +14,12 @@ export function ParagraphComp()
         // Save the 'para' state to local storage in JSON format
         localStorage.setItem("textData", JSON.stringify(para));
       }, [para]);
-    
-     
-    let count = para===undefined? 0:para.split(/\s+/).filter(Boolean).length; 
+      console.log(typeof para);
+      if (typeof para !== "string") {
+        setPara(""); // Set it to an empty string if it's not a string
+      }
+      
+    let count = para.split(/\s+/).filter(Boolean).length; 
     
     function handleChange(e)
     {
