@@ -1,0 +1,3 @@
+# React + Vite
+
+Word Counter
